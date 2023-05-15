@@ -14,21 +14,37 @@
     <div class="banner"></div>
 </header>
 
-<!-- search bar -->
-<div class="container search-bar">
-    <div class="search-bar-outer">
-        <div class="search-bar-inner">
-            <form action="/search">
-                <h4 class="mb-2">尋找餐廳：</h4>
-                <div class="input-group">
-                    <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類"
-                        aria-label="Restaurant Name..." value="{{keyword}}" aria-describedby="search-button">
-                    <div class="input-group-append">
-                        <button class="btn btn-major" type="submit" id="search-button"><i
-                                class="fas fa-search">搜尋</i></button>
+<div class="container col-8">
+    <!-- search bar -->
+    <div class="container search-bar col-6" style="display: inline-block;">
+        <div class="search-bar-outer">
+            <div class="search-bar-inner">
+                <form action="/search">
+                    <h4 class="mb-2">尋找餐廳：</h4>
+                    <div class="input-group">
+                        <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類"
+                            aria-label="Restaurant Name..." value="{{keyword}}" aria-describedby="search-button">
+                        <div class="input-group-append">
+                            <button class="btn btn-major" type="submit" id="search-button"><i
+                                    class="fas fa-search">搜尋</i></button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-2" style="display: inline-block;">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Sort
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">A -> Z</a></li>
+                <li><a class="dropdown-item" href="#">Z -> A</a></li>
+                <li><a class="dropdown-item" href="#">類別</a></li>
+                <li><a class="dropdown-item" href="#">地區</a></li>
+            </ul>
         </div>
     </div>
 </div>
