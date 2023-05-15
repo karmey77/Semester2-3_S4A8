@@ -1,0 +1,106 @@
+<header>
+    <!-- navigation -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
+                    width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單">
+                我的餐廳清單
+            </a>
+            <a href="/create">新增餐廳</a>
+        </div>
+    </nav>
+    <div class="banner"></div>
+</header>
+
+<form action="/restaurants" method="POST">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto">
+                <p></p>
+                <p>
+                    <span class="text-secondary">
+                        <i class="fas fa-utensils pr-2"></i>
+                        ID:
+                    </span>
+                    <input type="number" placeholder="ID" name="id">
+                </p>
+                <p></p>
+                <p>
+                    <span class="text-secondary">
+                        <i class="fas fa-utensils pr-2"></i>
+                        餐廳名稱：
+                    </span>
+                    <input type="text" placeholder="Name" name="name">
+                </p>
+                <p></p>
+                <p>
+                    <span class="text-secondary">
+                        <i class="fas fa-utensils pr-2"></i>
+                        餐廳英文名稱：
+                    </span>
+                    <input type="text" placeholder="English Name" name="name_en">
+                </p>
+                <p></p>
+                <p class="mb-1">
+                    <span class="text-secondary">
+                        <i class="fas fa-utensils pr-2"></i>
+                        類別：
+                    </span>
+                    <input type="text" placeholder="Category" name="category">
+                </p>
+                <p></p>
+                <p class="mb-1">
+                    <span class="text-secondary">
+                        <i class="fas fa-map-marker-alt pr-2"></i>
+                        地址：
+                    </span>
+                    <input type="text" placeholder="Address" name="location">
+                </p>
+                <p></p>
+                <p class="mb-1">
+                    <span class="text-secondary">
+                        <i class="fas fa-map-marker-alt pr-2"></i>
+                        Google Map網址：
+                    </span>
+                    <input type="url" placeholder="Google Map Url" name="google_map">
+                </p>
+                <p></p>
+                <p class="mb-1">
+                    <span class="text-secondary">
+                        <i class="fas fa-map-marker-alt pr-2"></i>
+                        Google Map評分：
+                    </span>
+                    <input type="number" placeholder="Rating" name="rating">
+                </p>
+                <p></p>
+                <p class="mb-1">
+                    <span class="text-secondary">
+                        <i class="fas fa-mobile-alt pr-2"></i>
+                        電話：
+                    </span>
+                    <input type="text" placeholder="Phone" name="phone">
+                </p>
+                <p></p>
+                <p class="mb-5">
+                    <span class="text-secondary">
+                        <i class="fas fa-mobile-alt pr-2"></i>
+                        餐廳描述：
+                    </span>
+                    <input type="text" placeholder="Description" name="description">
+                </p>
+                <p></p>
+                <p class="mb-5">
+                    <span class="text-secondary">
+                        <i class="fas fa-mobile-alt pr-2"></i>
+                        餐廳照片網址：
+                    </span>
+                    <input type="url" placeholder="Image url" name="image">
+                </p>
+                <p></p>
+                <button type="submit">Create</button>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</form>
