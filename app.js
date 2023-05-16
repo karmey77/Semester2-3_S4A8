@@ -38,19 +38,6 @@ const port = 3003
 
 app.use(express.static('public'))
 
-// search
-app.get('/search', (req, res) => {
-    const keyword = req.query.keyword
-    return Restaurant.find()
-        .lean()
-        .then((restaurants) => restaurants.filter(restaurant => {
-            return `${restaurant.name}${restaurant.category}${restaurant.name_en}`
-                .toLowerCase()
-                .includes(keyword.toLowerCase())
-        }))
-        .then((restaurants) => res.render('index', { restaurant: restaurants, keyword }))
-        .catch(error => console.log(error))
-})
 
 // start and listen on the Express server
 app.listen(port, () => {

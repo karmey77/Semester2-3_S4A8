@@ -37,13 +37,18 @@
         <div class="dropdown">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                Sort
+                {{#if sort includeZero=true}}
+                {{sort}}
+                {{else}}
+                排序
+                {{/if}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">A -> Z</a></li>
-                <li><a class="dropdown-item" href="#">Z -> A</a></li>
-                <li><a class="dropdown-item" href="#">類別</a></li>
-                <li><a class="dropdown-item" href="#">地區</a></li>
+                <li><a class="dropdown-item" href="/sort/asc">A -> Z</a></li>
+                <li><a class="dropdown-item" href="/sort/desc">Z -> A</a></li>
+                <li><a class="dropdown-item" href="/sort/rating">評分</a></li>
+                <li><a class="dropdown-item" href="/sort/category">類別</a></li>
+                <li><a class="dropdown-item" href="/sort/location">地區</a></li>
             </ul>
         </div>
     </div>
@@ -73,7 +78,8 @@
                     <div style=" text-align: right; padding-bottom: 25%;">
                         <a href="/restaurants/{{ this._id }}">detail</a>
                         <a href="/restaurants/{{ this._id }}/edit">edit</a>
-                        <form action="/restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
+                        <form action="/restaurants/{{ this._id }}?_method=DELETE" method="POST"
+                            style="display: inline;">
                             <button type="submit">delete</button>
                         </form>
                     </div>
